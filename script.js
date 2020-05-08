@@ -9,22 +9,38 @@ function testVariable() {
     var city = document.getElementById("city").value;
     var state = document.getElementById("state").value;
     var code = document.getElementById("postalcode").value;
-    if(firstname == null || firstname == "")
+    if(firstname == null || firstname == ""){
         alert("Please enter your First Name");
-    if(email.includes("@") == false || email.includes(".com") == false)
+        return;
+    }
+    if(email.includes("@") == false || email.includes(".com") == false){
         alert("Enter a valid Email Address");
-    if(password.length < 6)
+        return;
+    }
+    if(password.length < 6){
         alert("Password must be at least 6 characters long");
-    if(address == null || address == "")
+        return;
+    }
+    if(address == null || address == ""){
         alert("Please enter your Address");
-    if(phone.length != 10)
+        return;
+    }
+    if(phone.length != 10){
         alert("Please enter a valid Phone Number");
-    if(city == null || city == "")
+        return;
+    }
+    if(city == null || city == ""){
         alert("Please enter your City");
-    if(state == null || state == "")
+        return;
+    }
+    if(state == null || state == ""){
         alert("Please enter your State");
-    if(code.length != 6)
+        return;
+    }
+    if(code.length != 6){
         alert("Please enter a valid postal code");
+        return;
+    }
     else{
         var nameresult = salutation + ' ' + firstname + ' ' + lastname;
         document.getElementById('nameresult').textContent = nameresult;
@@ -41,4 +57,22 @@ function testVariable() {
         var coderesult = code;
         document.getElementById('coderesult').textContent = coderesult;
     }
+}
+function clearField() {
+    document.getElementById("firstname").value = '';          
+    document.getElementById("lastname").value= '';
+    document.getElementById("password").value= '';
+    document.getElementById("email").value= '';
+    document.getElementById("address").value= '';
+    document.getElementById("phone").value= '';
+    document.getElementById("city").value= '';
+    document.getElementById("state").value= '';
+    document.getElementById("postalcode").value= '';
+    document.getElementById('nameresult').value= '';
+    document.getElementById('emailresult').value= '';
+    document.getElementById('addressresult').value= '';
+    document.getElementById('phoneresult').value= '';
+    document.getElementById('cityresult').value= '';
+    document.getElementById('stateresult').value= '';
+    document.getElementById('coderesult').value= '';
 }
